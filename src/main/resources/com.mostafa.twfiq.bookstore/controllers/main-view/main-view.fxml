@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXToggleNode?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="parentLayout" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0"
+            style="-fx-background-color: transparent;" stylesheets="@scroll-pane.css"
+            xmlns="http://javafx.com/javafx/18.0.1"
+            fx:controller="com.mostafa.twfiq.bookstore.controllers.MainViewController">
+    <children>
+        <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane prefHeight="70.0"
+                            style="-fx-border-color: transparent transparent #aaaaaa transparent; -fx-border-width: 0.3; -fx-background-color: #fafafe;">
+                    <children>
+                        <GridPane alignment="CENTER_LEFT" hgap="10.0" prefHeight="40.0" AnchorPane.bottomAnchor="0.0"
+                                  AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columnConstraints>
+                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0"
+                                                   percentWidth="70.0" prefWidth="100.0"/>
+                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0"
+                                                   percentWidth="80.0" prefWidth="100.0"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                            <children>
+                                <AnchorPane prefHeight="0.0" prefWidth="151.0">
+                                    <children>
+                                        <Label fx:id="titleLbl" textFill="#333333" AnchorPane.bottomAnchor="0.0"
+                                               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                               AnchorPane.topAnchor="0.0">
+                                            <font>
+                                                <Font name="Arial Bold" size="36.0"/>
+                                            </font>
+                                            <padding>
+                                                <Insets left="10.0"/>
+                                            </padding>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                    <children>
+                                        <HBox alignment="CENTER" minHeight="0.0" minWidth="0.0" prefHeight="40.0"
+                                              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true"
+                                                           preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@assets/search.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <TextField fx:id="searchField" promptText="Search for book"
+                                                           style="-fx-background-color: transparent; -fx-border-color: transparent transparent #aaaaaa transparent;"
+                                                           HBox.hgrow="ALWAYS">
+                                                    <font>
+                                                        <Font name="Calibri" size="18.0"/>
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                            </padding>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </GridPane>
+                    </children>
+                </AnchorPane>
+                <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <AnchorPane prefWidth="80.0"
+                                    style="-fx-background-color: #f3f4ff; -fx-border-color: transparent #aaaaaa transparent transparent; -fx-border-width: 0.3;">
+                            <children>
+                                <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="-14.0" layoutY="85.0"
+                                            prefHeight="200.0" prefWidth="200.0"
+                                            style="-fx-border-color: transparent; -fx-background-color: transparent;"
+                                            AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0"
+                                            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <content>
+                                        <AnchorPane
+                                                style="-fx-border-color: transparent; -fx-background-color: transparent;">
+                                            <children>
+                                                <VBox layoutX="-2.0" layoutY="2.0" prefHeight="527.0" prefWidth="70.0"
+                                                      style="-fx-background-color: transparent; -fx-border-color: transparent;"
+                                                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="70.0"
+                                                                    prefWidth="66.0">
+                                                            <children>
+                                                                <JFXToggleNode fx:id="storeToggleBtn"
+                                                                               contentDisplay="TOP" graphicTextGap="5.0"
+                                                                               layoutX="-4.0" prefHeight="50.0"
+                                                                               prefWidth="50.0" text="Store"
+                                                                               AnchorPane.bottomAnchor="0.0"
+                                                                               AnchorPane.leftAnchor="0.0"
+                                                                               AnchorPane.rightAnchor="0.0"
+                                                                               AnchorPane.topAnchor="0.0">
+                                                                    <graphic>
+                                                                        <ImageView fitHeight="25.0" fitWidth="25.0"
+                                                                                   pickOnBounds="true"
+                                                                                   preserveRatio="true">
+                                                                            <image>
+                                                                                <Image url="@assets/shopping-cart.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                    </graphic>
+                                                                    <font>
+                                                                        <Font name="Corbel Light" size="14.0"/>
+                                                                    </font>
+                                                                    <selectedColor>
+                                                                        <Color red="0.027450980618596077"
+                                                                               green="0.18039216101169586"
+                                                                               blue="0.3607843220233917"
+                                                                               opacity="0.20000000298023224"/>
+                                                                    </selectedColor>
+                                                                    <toggleGroup>
+                                                                        <ToggleGroup fx:id="options"/>
+                                                                    </toggleGroup>
+                                                                </JFXToggleNode>
+                                                            </children>
+                                                            <padding>
+                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                                            </padding>
+                                                        </AnchorPane>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="70.0"
+                                                                    prefWidth="66.0">
+                                                            <children>
+                                                                <JFXToggleNode fx:id="libraryToggleBtn"
+                                                                               contentDisplay="TOP" graphicTextGap="5.0"
+                                                                               layoutX="-4.0" prefHeight="50.0"
+                                                                               prefWidth="50.0" text="Library"
+                                                                               toggleGroup="$options"
+                                                                               AnchorPane.bottomAnchor="0.0"
+                                                                               AnchorPane.leftAnchor="0.0"
+                                                                               AnchorPane.rightAnchor="0.0"
+                                                                               AnchorPane.topAnchor="0.0">
+                                                                    <graphic>
+                                                                        <ImageView fitHeight="25.0" fitWidth="25.0"
+                                                                                   pickOnBounds="true"
+                                                                                   preserveRatio="true">
+                                                                            <image>
+                                                                                <Image url="@assets/books.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                    </graphic>
+                                                                    <font>
+                                                                        <Font name="Corbel Light" size="14.0"/>
+                                                                    </font>
+                                                                    <selectedColor>
+                                                                        <Color red="0.027450980618596077"
+                                                                               green="0.18039216101169586"
+                                                                               blue="0.3607843220233917"
+                                                                               opacity="0.20000000298023224"/>
+                                                                    </selectedColor>
+                                                                </JFXToggleNode>
+                                                            </children>
+                                                            <padding>
+                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                                            </padding>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </ScrollPane>
+                                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0" spacing="5.0"
+                                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                      AnchorPane.rightAnchor="0.0">
+                                    <children>
+                                        <Circle fx:id="userImage" fill="#d2d7dc" radius="20.0" stroke="BLACK"
+                                                strokeType="INSIDE">
+                                            <effect>
+                                                <DropShadow/>
+                                            </effect>
+                                        </Circle>
+                                        <Label fx:id="userNameLbl" prefHeight="18.0" text="User name">
+                                            <font>
+                                                <Font name="Corbel" size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Button fx:id="logoutBtn" mnemonicParsing="false" prefHeight="11.0"
+                                                prefWidth="51.0" style="-fx-background-color: transparent;"
+                                                text="logout" textFill="#dc1212"/>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fafafe;"
+                                    HBox.hgrow="ALWAYS">
+                            <children>
+                                <ScrollPane fitToHeight="true" fitToWidth="true"
+                                            style="-fx-border-color: transparent; -fx-background-color: transparent;"
+                                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <content>
+                                        <AnchorPane fx:id="viewLayout" style="-fx-background-color: transparent;"/>
+                                    </content>
+                                </ScrollPane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

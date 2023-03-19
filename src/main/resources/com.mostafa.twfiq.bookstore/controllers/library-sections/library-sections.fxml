@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="parentLayout" spacing="30.0" xmlns="http://javafx.com/javafx/18.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mostafa.twfiq.bookstore.controllers.LibrarySectionsController">
+    <children>
+        <VBox minHeight="320.0" spacing="10.0">
+            <children>
+                <AnchorPane prefHeight="30.0">
+                    <children>
+                  <JFXButton fx:id="addPracticalBookBtn" prefWidth="40.0" style="-fx-border-color: #aaaaaa; -fx-border-radius: 10;" text="+" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                        <Label prefWidth="50.0" text="Practical manual books" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
+                            <font>
+                                <Font name="Corbel Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-border-color: transparent; -fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+                    <content>
+                        <AnchorPane style="-fx-background-color: transparent;">
+                            <children>
+                                <HBox fx:id="practicalManualSection" alignment="CENTER_LEFT" prefWidth="897.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </VBox>
+        <VBox minHeight="320.0" spacing="10.0">
+            <children>
+                <AnchorPane prefHeight="30.0">
+                    <children>
+                  <JFXButton fx:id="addHandWrittenBookBtn" prefWidth="40.0" style="-fx-border-color: #aaaaaa; -fx-border-radius: 10;" text="+" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                        <Label text="Hand written books" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
+                            <font>
+                                <Font name="Corbel Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-border-color: transparent; -fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+                    <content>
+                        <AnchorPane style="-fx-background-color: transparent;">
+                            <children>
+                                <HBox fx:id="handWrittenSection" alignment="CENTER_LEFT" prefWidth="897.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </VBox>
+        <VBox minHeight="320.0" spacing="10.0">
+            <children>
+                <AnchorPane prefHeight="30.0">
+                    <children>
+                  <JFXButton fx:id="addTextBookBtn" prefWidth="40.0" style="-fx-border-color: #aaaaaa; -fx-border-radius: 10;" text="+" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                        <Label text="Text books" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
+                            <font>
+                                <Font name="Corbel Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-border-color: transparent; -fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+                    <content>
+                        <AnchorPane style="-fx-background-color: transparent;">
+                            <children>
+                                <HBox fx:id="textBooksSection" alignment="CENTER_LEFT" prefWidth="897.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </VBox>
+    </children>
+    <padding>
+        <Insets left="10.0" right="10.0" top="10.0" />
+    </padding>
+</VBox>
